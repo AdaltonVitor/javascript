@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pesquisa de pais</title>
+</head>
+<body>
+    <h1>Vove é brasileiro</h1>
+     Digite seu país <input type="text" name="pais" id="pais">
+     <input type="button" value="verificar" onclick="pesquisar()">
+     <section id="nacionalidade"></section>
+
+
+     <script>
+         function pesquisar(){
+             var txtpais = window.document.getElementById('pais')
+             var nacionalidade = window.document.getElementById('nacionalidade')
+             var nacao = txtpais.value
+             nacionalidade.innerHTML = `<p>seu pais e <strong>${nacao}</strong></p>`
+             if(nacao == 'Brasil'){
+                nacionalidade.innerHTML += 'Voce é Brasileiro'
+             }else{
+                nacionalidade.innerHTML += 'Voce é estrangeiro'
+             }
+    
+
+             
+
+         }
+     </script>
+</body>
+</html>
